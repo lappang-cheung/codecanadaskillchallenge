@@ -13,25 +13,31 @@ export default class App extends Component {
         this.getCategoryTitle()
     }
 
+    // Get the category from the data
     getCategoryTitle = () => {
+        // Store the information
         let prevCategory = ''
         let title = []
+        // Const for findIndex func
         const find = x => x.violation_category === prevCategory
-
+        // Go through the array and find categories
         for (let i = 0; i < this.state.data.length; i++){
+            // If category is new
             if(prevCategory !== this.state.data[i].violation_category){
+                // Set the category 
                 prevCategory = this.state.data[i].violation_category
+                // Check if category already added
                 if(title.findIndex(find) < 0){
                     title.push({violation_category: prevCategory})
                 }
             }
         }
-
+        // Set the state into the category title array
         this.setState({ categoryTitle: title }, () => { 
         // console.log(this.state.categoryTitle)
         })
     }
-
+    
     // getVoilationPerCategory = (category) => {
     // let count = 0
 
@@ -43,16 +49,20 @@ export default class App extends Component {
     // return count
     // }
 
+    // Return a sort category array
     getSortedPerCategory = (category) => {
+        // Store the sort array
         let sortCat = []
-
+        // Loop for each category
         for(let i = 0; i < this.state.data.length; i++){
+            // If category matches then push into the temp array
             if(category === this.state.data[i].violation_category){
                 sortCat.push(this.state.data[i])
             }
         }
         // console.log(sortCat.sort((a,b) => new Date(a.violation_date) - new Date(b.violation_date)))
 
+        // Return the stored array
         return sortCat.sort((a,b) => new Date(a.violation_date) - new Date(b.violation_date))
     }
 

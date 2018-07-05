@@ -14,12 +14,12 @@ In order to install the app do the following:
 * `yarn install` to install the local packages
 * `yarn start` to run the application for backend and frontend
 
-Note: Please use the latest version of node v10+ & npm v6+ 
-
 If failed to use yarn then use the following:
 
 * `npm run install`
 * `npm run start`
+
+Note: Please use the latest version of node v10+ & npm v6+ 
 
 ## Assumptions
 As the file was given in CSV, the data in the program would be parse into JSON and was assumed there exist a function for it. As the data is stored in a

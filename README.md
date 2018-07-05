@@ -14,7 +14,7 @@ In order to install the app do the following:
 * `yarn install` to install the local packages
 * `yarn start` to run the application for backend and frontend
 
-Note: Since the remove method is using filters method, any duplication will be erased from the array
+Note: Please use the latest version of node v10+ & npm v6+ 
 
 If failed to use yarn then use the following:
 
@@ -29,6 +29,4 @@ However to due to time limitation of one hour, assumption was the inforation of 
 requirements of skill challenge.
 
 ## Language Used
-The language was written in ReactJS, as this challenge was to display the data to the client and the client only need the read-only information but as
-well the time limited of 1hour. If more time was given, there would be difference components created for filtering each individual categories and
-with its own view components.
+The language was written in ReactJS, as this challenge was to display the data to the client and the client only need the read-only information but as well the time limited of 1hour. If more time was given, there would be difference components created for filtering each individual categories and with its own view components.
